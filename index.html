@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webring</title>
+    <script src="webring.js"></script>
+  </head>
+  <body>
+    <h1>THIS IS A GENERIC WEBRING</h1>
+    <p>FILL THIS PAGE UP WITH WHATEVER YOU LIKE</p>
+    
+    <p>THIS CODE WAS CREATED BY <a href="javascript:window.location.href = getMember('sapero');">JULIA</a></p>
+
+    <p><a href="javascript:window.location.href = randomMember();">RANDOM MEMBER</a></p>
+
+    <table>
+      <thead><tr><th>MEMBER</th><th>SITE</th></tr></thead>
+      <tbody id="memberlist"></tbody>
+    </table>
+    
+    <script>
+const table = document.getElementById("memberlist");
+for (const member of members) {
+  table.innerHTML += `<tr><td>${member.name}</td><td><a href="${member.site}">${member.site}</a></td></tr>\n`
+}
+    </script>
+  </body>
+</html>
