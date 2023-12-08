@@ -6,24 +6,21 @@ const members = [
   { name: "exampleorg", site: "https://example.org/"}
 ];
 
-var memberIndex = {
-  "sapero": 0,
-  "examplecom": 1,
-  "exampleorg": 2
-}
+var memberIndex = [];
+members.forEach(function(element) { memberIndex.push(element.name)} );
 
 function getMember(member) {
-  try { return members[ (memberIndex[member]) ].site; }
+  try { return members[ (memberIndex.indexOf(member)) ].site; }
   catch(_) { return indexLink; } 
 }
 
 function nextMember(member) {
-  try { return members[ (memberIndex[member]+1) % members.length ].site; }
+  try { return members[ (memberIndex.indexOf(member)+1) % members.length ].site; }
   catch(_) { return indexLink; } 
 }
 
 function previousMember(member) {
-  try { return members[ (memberIndex[member]+members.length-1) % members.length ].site; }
+  try { return members[ (memberIndex.indexOf(member)+members.length-1) % members.length ].site; }
   catch(_) { return indexLink; } 
 }
 
