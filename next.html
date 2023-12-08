@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webring</title>
+    <script src="webring.js"></script>
+    <script>var urlParams = new URLSearchParams(window.location.search); redirect = urlParams.get('member'); if (redirect === null) { window.location.href = 'index.html' } else { window.location.href = nextMember(redirect); }</script>
+  </head>
+</html>
